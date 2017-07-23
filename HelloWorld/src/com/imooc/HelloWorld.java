@@ -1,5 +1,7 @@
 package com.imooc;
 
+import java.util.Arrays;
+
 /**
  * [用记事本或其他编辑器编写Java程序]
  * 1.使用记事本编辑源文件:                    myProgram.java
@@ -79,6 +81,7 @@ public class HelloWorld {
         System.out.println(sum);
 
         /*
+
         * [强制类型转换]
         * 语法: (数据类型) 数值
         * 强制类型转换会造成数据的丢失
@@ -95,5 +98,62 @@ public class HelloWorld {
         * */
         final String WORD="Imooc";
 
+        /*
+        * [运算符]
+        * 算数运算符 (+-*\/)
+        * 赋值运算符 =,+=,-=
+        * 比较运算符 >,<,==,>=,<=
+        * 逻辑运算符 && || ! ^(有且只有一个true=>异或)
+        * 条件运算符 (三元运算符)
+        * */
+
+
+        /*[条件控制]*/
+
+        /*
+        * [数组]
+        * 数组可以理解是一个巨大的"盒子",里面可以按顺序存放多个类型相同的数据
+        *
+        * [数组的使用]
+        * 1:声明数组
+        *   语法: 数据类型[] 数组名 ||  数据类型 数组名[]
+        *   eg: int[] scores; int scores[]
+        *
+        * 2.分配空间
+        * 指定数组中最多存储多少个元素
+        *   语法: 数组名=new 数据类型[数组长度]
+        *   eg:scores=new int[5]
+        *
+        * 3.赋值
+        *   eg:scores[0]=98;scores[1]=79;
+        *
+        * 4.直接创建数组的方法:将声明,分配空间和赋值合并
+        *   int[] scores={78,91,83,68};
+        *   等价于
+        *   int[] scores=new int[]{78,91,83,68};
+        *
+        * 5.查看数组长度
+        * 语法: 数组名.length 用于获取数组的长度
+        * */
+
+        int[] scores=new int[]{78,91,83,68};
+
+        //使用foreach操作数组
+        for(int score :scores){
+            System.out.println(score);
+        }
+
+        //使用Arrays类操作Java中的数组
+        //Arrays类是Java中提供的一个工具类.在Java.util包中,该类中包含了一些方法用来直接操作数组
+
+        /*
+        * [Arrays中常用的方法]
+        * 1.排序
+        *   语法:Arrays.sort(数组名)
+        * 2.数组转化为字符串
+        *   语法:Arrays.toString(数组名)
+        * */
+        String strArray= Arrays.toString(scores);
+        System.out.println(strArray);
     }
 }
